@@ -82,7 +82,10 @@ header .profile p {
 
 
 header .contact-info {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header .contact-info a {
@@ -93,9 +96,15 @@ header .contact-info a {
     transition: color 0.3s;
 }
 
+header .contact-info a:not(:last-child)::after {
+    content: " |";  /* Add the pipe separator after each link except the last one */
+    margin-left: 10px; /* Space between the link and separator */
+}
+
 header .contact-info a:hover {
     color: #f39c12;
 }
+
 
 section {
     padding: 60px 0;
