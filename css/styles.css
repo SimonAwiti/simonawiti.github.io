@@ -24,8 +24,28 @@ header {
     border-bottom: 1px solid #ccc;
 }
 
+
+
+header .profile p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+header .profile {
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px; /* Adjust the size of the image */
+    height: 150px;
+    border-radius: 50%; /* Make it circular */
+    margin-bottom: 20px; /* Space between the picture and the name */
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+}
+
 header .profile h1 {
-    font-size: 2.5rem;  /* Reduced size for better mobile responsiveness */
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
@@ -33,6 +53,8 @@ header .profile p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
+
+
 
 header .contact-info {
     margin-top: 20px;
