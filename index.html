@@ -5,221 +5,683 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Awiti - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+    </style>
 </head>
 
 <body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
 
-    <header>
+    <!-- Navigation -->
+    <nav id="navbar">
         <div class="container">
-            <div class="profile">
-                <!-- Add your image here -->
-                <img src="css/mydp.jpg" alt="Simon Awiti" class="profile-picture">
-                <h1>Simon Awiti</h1>
-                <p>DevOps Engineer | Software Developer | Cloud Architect | IT Support | Systems Administrator</p>
-            </div>
-            <div class="contact-info">
-                <a href="mailto:awitisimon23@gmail.com">awitisimon23@gmail.com</a>
-                <a href="#">+2547 9822 6640</a>
-                <a href="https://www.linkedin.com/in/simon-awiti-350787115/">LinkedIn</a>
-                <a href="https://drive.google.com/file/d/1uyBV51xZNVnOfQJ7VgW9FAXKSrFtVMkg/view?usp=sharing">Resume</a>
-                <a href="https://medium.com/@awitisimon23">Medium</a>
+            <div class="nav-container">
+                <div class="nav-logo">SA</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-    </header>
-    
+    </nav>
 
-    <section id="about">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
         <div class="container">
-            <h2>About Me</h2>
-            <p>Versatility meets expertise in my journey - A seasoned DevOps Engineer with over seven years of experience in designing, automating, and optimizing scalable infrastructure, CI/CD pipelines, and cloud-native solutions. Proficient in scripting, container orchestration, and infrastructure as code, with a proven track record of enhancing system reliability, performance, and security. Skilled in Linux/Windows system administration, virtualization, and cloud platforms, I excel at driving seamless deployments and operational efficiency. Passionate about leveraging cutting-edge technologies to solve complex challenges, foster collaboration, and deliver impactful solutions that align with organizational goals. </p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="project-container">
-                <div class="project">
-                    <h3>Swypt.io Web Application</h3>
-                    <p>I designed and developed the Swypt.io web application, a cutting-edge platform for seamless transactions. I architected and provisioned the infrastructure on AWS, utilizing AWS Amplify to host and run the application. The setup includes integration with Amazon Route 53 for DNS management and a globally distributed CDN for efficient content delivery. The application is highly scalable, secure, and optimized for performance, ensuring a smooth user experience worldwide.</p>
-                    <a href="https://swypt.io" target="_blank" class="btn">View Project</a>
+            <div class="hero-content">
+                <img src="css/mydp.jpg" alt="Simon Awiti" class="hero-avatar">
+                <h1 class="hero-title">Simon Awiti</h1>
+                <p class="hero-subtitle">DevOps Engineer | Cloud Architect | Systems Administrator</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        View My Work
+                    </a>
+                    <a href="mailto:awitisimon23@gmail.com" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
                 </div>
-                <div class="project">
-                    <h3>Official Catholic University of East Africa Website</h3>
-                    <p>I designed, developed, and deployed the official website for the Catholic University of East Africa (CUEA). This involved setting up the underlying cloud architecture, optimizing the infrastructure for performance, and ensuring global accessibility through a CDN setup. Additionally, I implemented SEO best practices, ensured responsiveness across devices, and provisioned SSL certificates for enhanced security. The website serves as the primary digital platform for the university, providing information to students, staff, and stakeholders worldwide.</p>
-                    <a href="https://cuea.edu" target="_blank" class="btn">View Project</a>
-                </div>
-                <div class="project">
-                    <h3>E-Learning Platform for Catholic University of East Africa</h3>
-                    <p>I developed the platform, designing and tuning the underlying infrastructure it runs on, utilizing PHP on a Linux environment to enable it to handle over 10,000 students concurrently. I also implemented a robust monitoring system to track and alert on the system's uptime and resource utilization, ensuring 100% availability. The platform includes features such as online teaching/meetings, course management, registration details, and integration with payment gateways and CRM.</p>
-                    <a href="https://elearning.cuea.edu" target="_blank" class="btn">View Project</a>
-                </div>
-                <div class="project">
-                    <h3>E-Commerce Web App for GadgetWorld</h3>
-                    <p>I developed the online store for computer gadgets, facilitating resource provisioning on the cloud and setting up DNS configurations. The platform allows clients to browse products, inquire via WhatsApp chat, and make purchases. The admin panel offers comprehensive product and user management, along with payment gateway integration.</p>
-                    <a href="https://gadgetworld.co.ke" target="_blank" class="btn">View Project</a>
-                </div>
-                <div class="project">
-                    <h3>NGO Web App for SROM Trust</h3>
-                    <p>I developed this web app, which allows well-wishers to view ongoing projects and contribute financially, with seamless payment gateway integration for easy donations. Additionally, I facilitated resource provisioning and hosting on GCP, along with DNS configuration and SSL certificate setup, ensuring a secure and scalable platform.</p>
-                    <a href="https://sromtrust.co.ke/" target="_blank" class="btn">View Project</a>
-                </div>
-                <div class="project">
-                    <h3>A Queue Management System at Shephards Hospital</h3>
-                    <p>
-                        I developed this system and provisioned a bare-metal server, configuring the appropriate RAID setup, installing the Linux OS, and tuning the webserver and network configurations for optimal performance. I also implemented a monitoring system to ensure smooth operation. The platform efficiently manages patient queues at a busy hospital in Narok County, Kenya, directing patients to the correct counters after issuing them a ticket number.</p>
-                    <a href="#" target="_blank" class="btn">View Project</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/simon-awiti-350787115/" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://medium.com/@awitisimon23" class="social-link" target="_blank">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1uyBV51xZNVnOfQJ7VgW9FAXKSrFtVMkg/view?usp=sharing" class="social-link" target="_blank">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a href="tel:+254798226640" class="social-link">
+                        <i class="fas fa-phone"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience-education">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <div id="experience" class="section-half">
-                <h2>Education & Work Experience</h2>
-                <div class="experience-container">
-                    <div>
-                        <ul>
-                            <h3>Work</h3>
-                            <li><strong>DevOps Engineer - US Refugee Admissions Program</strong> (April 2023 - Present)</li>
-                            <li><strong>DevOps Consultant - Swypt.io</strong> (Oct 2024 - Jan 2025)</li>
-                            <li><strong>Cloud Solutions Architect - 7th Century Music</strong> (Nov 2022 - Oct 2023)</li>
-                            <li><strong>Systems & Database Engineer - Catholic University of Eastern Africa</strong> (Oct 2019 - Apr 2023)</li>
-                            <li><strong>Software Engineer - Bizz-tech Solutions Limited</strong> (July 2018 - Sept 2019)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <h3>Education</h3>
-                            <li><strong>MSC: Information Systems Security</strong> - United States International University Africa, Nairobi (2023 - Present)</li>
-                            <li><strong>Bachelor of Science: Computer & Information Science</strong> - Chuka University, Chuka (2013 - 2018), 1st Class Honors</li>
-                            <li><strong>Certified Cloud Solutions Architect - Associate (AWS)</strong></li>
-                            <li><strong>Certified Cloud Practitioner (AWS)</strong></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="section-header fade-in">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about building scalable solutions and driving innovation</p>
             </div>
-
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>Top Skills</h2>
-            <div class="skills-container">
-                <div class="skill">
-                    <h3>Linux</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%"></div>
+            <div class="about-content fade-in">
+                <p class="about-text">
+                    Versatility meets expertise in my journey - A seasoned DevOps Engineer with over seven years of experience in designing, automating, and optimizing scalable infrastructure, CI/CD pipelines, and cloud-native solutions. Proficient in scripting, container orchestration, and infrastructure as code, with a proven track record of enhancing system reliability, performance, and security.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label">Years Experience</span>
                     </div>
-                    <span class="percentage">95%</span>
-                </div>
-                <div class="skill">
-                    <h3>Windows</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Completed</span>
                     </div>
-                    <span class="percentage">95%</span>
-                </div>
-                <div class="skill">
-                    <h3>Docker</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Users Served</span>
                     </div>
-                    <span class="percentage">90%</span>
-                </div>
-                <div class="skill">
-                    <h3>Kubernetes (K8s)</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime Achieved</span>
                     </div>
-                    <span class="percentage">85%</span>
-                </div>
-                <div class="skill">
-                    <h3>AWS</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 98%"></div>
-                    </div>
-                    <span class="percentage">98%</span>
-                </div>
-                <div class="skill">
-                    <h3>GCP</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 88%"></div>
-                    </div>
-                    <span class="percentage">88%</span>
-                </div>
-                <div class="skill">
-                    <h3>CI/CD</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 94%"></div>
-                    </div>
-                    <span class="percentage">94%</span>
-                </div>
-                <div class="skill">
-                    <h3>Virtualization</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%"></div>
-                    </div>
-                    <span class="percentage">90%</span>
-                </div>
-                <div class="skill">
-                    <h3>Ansible</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%"></div>
-                    </div>
-                    <span class="percentage">90%</span>
-                </div>
-                <div class="skill">
-                    <h3>Zabbix</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 98%"></div>
-                    </div>
-                    <span class="percentage">98%</span>
-                </div>
-                <div class="skill">
-                    <h3>Jenkins</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%"></div>
-                    </div>
-                    <span class="percentage">90%</span>
-                </div>
-                <div class="skill">
-                    <h3>Terraform</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%"></div>
-                    </div>
-                    <span class="percentage">90%</span>
-                </div>
-                <div class="skill">
-                    <h3>GitHub</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%"></div>
-                    </div>
-                    <span class="percentage">95%</span>
-                </div>
-                <div class="skill">
-                    <h3>Python (Flask, Django)</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%"></div>
-                    </div>
-                    <span class="percentage">90%</span>
                 </div>
             </div>
         </div>
     </section>
-    
-    
 
-    <footer>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
         <div class="container">
-            <p>&copy; 2025 Simon Awiti. All rights reserved.</p>
+            <div class="section-header fade-in">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing innovative solutions and technical excellence</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Swypt.io Web Application</h3>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Designed and developed a cutting-edge platform for seamless transactions. Architected infrastructure on AWS using Amplify, Route 53, and CDN for global distribution.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Monitoring</span>
+                            <span class="tech-tag">CRM</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://elearning.cuea.edu" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">GadgetWorld E-Commerce</h3>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Developed an online store for computer gadgets with cloud provisioning, WhatsApp integration, and comprehensive admin panel with payment gateway.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">E-Commerce</span>
+                            <span class="tech-tag">Cloud</span>
+                            <span class="tech-tag">WhatsApp API</span>
+                            <span class="tech-tag">Payment Gateway</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://gadgetworld.co.ke" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">SROM Trust NGO Platform</h3>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Built a donation platform for NGO with GCP hosting, payment gateway integration, and secure SSL implementation for seamless contributions.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">GCP</span>
+                            <span class="tech-tag">Payment Gateway</span>
+                            <span class="tech-tag">SSL</span>
+                            <span class="tech-tag">DNS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://sromtrust.co.ke/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Hospital Queue Management</h3>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Developed and deployed a queue management system with bare-metal server setup, RAID configuration, and comprehensive monitoring for hospital operations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Bare Metal</span>
+                            <span class="tech-tag">RAID</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Monitoring</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i>
+                                Private Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Expertise across multiple technologies and platforms</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-server"></i> Infrastructure & DevOps
+                    </h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Linux</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Kubernetes</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Ansible</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Terraform</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-cloud"></i> Cloud Platforms
+                    </h3>
+                    <div class="skill-item">
+                        <span class="skill-name">AWS</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 98%"></div>
+                            </div>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">GCP</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Virtualization</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-code-branch"></i> CI/CD & Monitoring
+                    </h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Jenkins</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">GitHub Actions</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Zabbix</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 98%"></div>
+                            </div>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">CI/CD Pipelines</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 94%"></div>
+                            </div>
+                            <span class="skill-percentage">94%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-code"></i> Development
+                    </h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Flask/Django</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Windows</span>
+                        <div class="skill-level">
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">My professional journey and academic background</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">DevOps Engineer</h3>
+                        <div class="timeline-company">US Refugee Admissions Program</div>
+                        <div class="timeline-date">April 2023 - Present</div>
+                        <p class="timeline-description">
+                            Leading DevOps initiatives for critical refugee admission systems, implementing scalable infrastructure solutions and optimizing deployment pipelines for enhanced system reliability and performance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">DevOps Consultant</h3>
+                        <div class="timeline-company">Swypt.io</div>
+                        <div class="timeline-date">Oct 2024 - Jan 2025</div>
+                        <p class="timeline-description">
+                            Provided expert DevOps consulting services, architecting cloud infrastructure on AWS and implementing best practices for scalable web applications.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Cloud Solutions Architect</h3>
+                        <div class="timeline-company">7th Century Music</div>
+                        <div class="timeline-date">Nov 2022 - Oct 2023</div>
+                        <p class="timeline-description">
+                            Designed and implemented cloud architecture solutions, optimizing performance and scalability for music streaming platforms.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Systems & Database Engineer</h3>
+                        <div class="timeline-company">Catholic University of Eastern Africa</div>
+                        <div class="timeline-date">Oct 2019 - Apr 2023</div>
+                        <p class="timeline-description">
+                            Managed university-wide systems and databases, developed e-learning platforms serving 10,000+ students, and implemented comprehensive monitoring solutions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Software Engineer</h3>
+                        <div class="timeline-company">Bizz-tech Solutions Limited</div>
+                        <div class="timeline-date">July 2018 - Sept 2019</div>
+                        <p class="timeline-description">
+                            Developed custom software solutions and managed client projects, gaining foundational experience in software development and project management.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">MSc Information Systems Security</h3>
+                        <div class="timeline-company">United States International University Africa</div>
+                        <div class="timeline-date">2023 - Present</div>
+                        <p class="timeline-description">
+                            Currently pursuing advanced studies in information systems security, focusing on cybersecurity frameworks and secure system design.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">BSc Computer & Information Science</h3>
+                        <div class="timeline-company">Chuka University</div>
+                        <div class="timeline-date">2013 - 2018</div>
+                        <p class="timeline-description">
+                            Graduated with First Class Honors, building strong foundation in computer science principles, programming, and system design.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Simon Awiti</h3>
+                    <p>DevOps Engineer passionate about building scalable, reliable systems and driving innovation through cutting-edge technologies.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#about">About</a></p>
+                    <p><a href="#projects">Projects</a></p>
+                    <p><a href="#skills">Skills</a></p>
+                    <p><a href="#experience">Experience</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><a href="mailto:awitisimon23@gmail.com">awitisimon23@gmail.com</a></p>
+                    <p><a href="tel:+254798226640">+254 798 226 640</a></p>
+                    <p><a href="https://www.linkedin.com/in/simon-awiti-350787115/" target="_blank">LinkedIn Profile</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Certifications</h3>
+                    <p>AWS Certified Solutions Architect</p>
+                    <p>AWS Certified Cloud Practitioner</p>
+                    <p>Kubernetes Administrator</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Simon Awiti. All rights reserved. Built with passion and modern web technologies.</p>
+            </div>
         </div>
     </footer>
 
-</body>
+    <!-- JavaScript -->
+    <script>
+        // Loading animation
+        window.addEventListener('load', function() {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
 
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Skills animation
+        const skillsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-progress');
+                    skillBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-category').forEach(el => {
+            skillsObserver.observe(el);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Typing effect for hero subtitle
+        const subtitleElement = document.querySelector('.hero-subtitle');
+        const originalText = subtitleElement.textContent;
+        subtitleElement.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < originalText.length) {
+                subtitleElement.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        
+        setTimeout(typeWriter, 2000);
+
+        // Particle background effect
+        function createParticle() {
+            const hero = document.querySelector('.hero');
+            const particle = document.createElement('div');
+            particle.style.position = 'absolute';
+            particle.style.width = '4px';
+            particle.style.height = '4px';
+            particle.style.background = 'rgba(255, 255, 255, 0.3)';
+            particle.style.borderRadius = '50%';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = '100%';
+            particle.style.pointerEvents = 'none';
+            particle.style.zIndex = '1';
+            
+            hero.appendChild(particle);
+            
+            const duration = Math.random() * 3000 + 2000;
+            particle.animate([
+                { transform: 'translateY(0px)', opacity: 1 },
+                { transform: `translateY(-${window.innerHeight + 100}px)`, opacity: 0 }
+            ], {
+                duration: duration,
+                easing: 'linear'
+            }).addEventListener('finish', () => {
+                particle.remove();
+            });
+        }
+        
+        setInterval(createParticle, 200);
+    </script>
+</body>
 </html>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Amplify</span>
+                            <span class="tech-tag">Route 53</span>
+                            <span class="tech-tag">CDN</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://swypt.io" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">CUEA Official Website</h3>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Designed, developed, and deployed the official website for Catholic University of East Africa with optimized cloud architecture and global accessibility.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cloud Architecture</span>
+                            <span class="tech-tag">SEO</span>
+                            <span class="tech-tag">SSL</span>
+                            <span class="tech-tag">CDN</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://cuea.edu" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">E-Learning Platform</h3>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Developed a robust e-learning platform handling 10,000+ concurrent students with integrated monitoring, CRM, and payment gateways.
+                        </p>
+                        <div class="project-tech">
