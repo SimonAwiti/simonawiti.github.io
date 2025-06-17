@@ -348,8 +348,13 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            /* This ensures responsive columns. minmax(300px, 1fr) is often a good starting point. */
+            /* I've adjusted minmax to 300px from 350px, as 350px can sometimes lead to only 2 columns on wider tablets. */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            /* Optional: Ensure rows auto-stretch if you want strict equal height from the grid level,
+            but Flexbox within the card is often more robust for specific element alignment. */
+            /* grid-auto-rows: 1fr; */
         }
 
         .project-card {
@@ -360,6 +365,12 @@
             transition: all 0.3s ease;
             position: relative;
             border: 1px solid var(--border-color);
+
+            /* --- IMPORTANT ADDITIONS FOR UNIFORMITY --- */
+            display: flex; /* Make the card a flex container */
+            flex-direction: column; /* Stack its children (header, content, links) vertically */
+            height: 100%; /* Ensures the card stretches to fill the grid cell's height */
+            /* --- END IMPORTANT ADDITIONS --- */
         }
 
         .project-card:hover {
@@ -373,6 +384,11 @@
             color: white;
             position: relative;
             overflow: hidden;
+            /* --- OPTIONAL: FOR CONSISTENT HEADER HEIGHT --- */
+            min-height: 100px; /* Adjust as needed. This ensures headers take up at least this much space */
+            display: flex; /* Makes the title vertically centered if it's shorter */
+            align-items: center; /* Vertically centers content if flex is used */
+            /* --- END OPTIONAL --- */
         }
 
         .project-header::before {
@@ -394,26 +410,33 @@
         .project-title {
             font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.5rem; /* Keep this if you want some space below title, or set to 0 */
             position: relative;
             z-index: 2;
+            /* Optional: If titles are too long and wrap, you could limit lines or use ellipsis,
+            but `min-height` on `project-header` is often better. */
+            /* white-space: normal; /* Ensure text wraps if it's too long */
         }
 
         .project-content {
             padding: 2rem;
+            /* --- IMPORTANT ADDITION FOR ALIGNMENT --- */
+            flex-grow: 1; /* This makes the content area expand to take up all available vertical space,
+                            pushing the .project-links to the bottom of the card. */
+            /* --- END IMPORTANT ADDITION --- */
         }
 
         .project-description {
             color: var(--text-secondary);
             line-height: 1.7;
-            margin-bottom: 2rem;
+            margin-bottom: 2rem; /* Keep this for spacing below description */
         }
 
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2rem; /* Keep this for spacing below tech tags */
         }
 
         .tech-tag {
@@ -428,6 +451,10 @@
         .project-links {
             display: flex;
             gap: 1rem;
+            padding: 0 2rem 2rem; /* Add padding to match .project-content's side padding */
+            /* --- OPTIONAL: FOR BUTTON ALIGNMENT WITHIN LINKS --- */
+            justify-content: flex-start; /* Aligns buttons to the start within their container */
+            /* --- END OPTIONAL --- */
         }
 
         .project-link {
@@ -446,6 +473,17 @@
         .project-link:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
+        }
+
+        /* Responsive Design Adjustments */
+        @media (max-width: 768px) {
+            /* ... (rest of your media query rules remain unchanged) ... */
+
+            .projects-grid {
+                grid-template-columns: 1fr; /* This is already good for single column on small screens */
+            }
+
+            /* No specific changes needed within project-card for mobile if flex properties are applied correctly above */
         }
 
         /* Skills Section */
